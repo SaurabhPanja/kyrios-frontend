@@ -53,7 +53,9 @@ class CardRender extends React.Component {
                 <FontAwesomeIcon className="mr-2" icon={faRupeeSign}></FontAwesomeIcon>
                 {product.price}
               </Card.Title>
-              <Card.Text className="m-0">{product.title}</Card.Text>
+              <Card.Text className="m-0">{
+                product.title.length > 12 ? product.title.slice(0,12)+"..." : product.title
+                }</Card.Text>
               <Card.Text className="mt-3 text-muted" style={{fontSize: "0.8rem"}}>NADIAD, KHEDA.</Card.Text>
             </Card.Body>
           </Card>
